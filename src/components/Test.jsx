@@ -1,11 +1,27 @@
-// import { Button } from '@material-ui/core';
+import { Button, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
+import jsonBooks from '../utils/books.json'
 
-import { Button } from "@mui/material";
 
 const Test = () => {
+
+    const [books, setBooks] = useState([])
+
+    useEffect(() => {
+        setBooks(jsonBooks.books)
+    }, [])
+
+
     return (
-        <Button > Hi how are you</Button>
-      );
+        <>
+            <Button > Hi how are you</Button>
+            <ul>
+                {
+                    books.map((book, i) => <li key={i}> <Typography>{book.title}</Typography></li> )
+                }
+            </ul>
+        </>
+    );
 }
 
 export default Test
