@@ -6,7 +6,7 @@ const theme = createTheme({
         primary:{
             main: "#FF33F3",
             // main: blue[500],
-        }
+        },
     }
 });
 
