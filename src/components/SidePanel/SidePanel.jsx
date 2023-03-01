@@ -1,7 +1,9 @@
-import { Drawer, Typography, IconButton, Divider, Stack } from "@mui/material"
+import { Drawer, Typography, IconButton, Divider, Stack, List, ListItem, ListItemButton, ListItemText } from "@mui/material"
 import MenuIcon from '@mui/icons-material/Menu'
 import { Box } from "@mui/system"
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import MenuBooks from "./MenuBooks";
+import MenuUser from "./MenuUser";
 
 
 const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
@@ -9,9 +11,9 @@ const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
 
 
   return (
-    <div>
+    <Box >
 
-      <IconButton size="large" edge='start' color='inherit' aria-label="logo" onClick={() => setIsDrawerOpened(true)}>
+      <IconButton sx={{margin:"40px"}} size="large" edge='start' color='inherit' aria-label="logo" onClick={() => setIsDrawerOpened(true)}>
         <MenuIcon></MenuIcon>
       </IconButton>
 
@@ -24,6 +26,7 @@ const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
         anchor='left'
         open={isDrawerOpened}
         onClose={() => setIsDrawerOpened(false)}
+        
       >
         <Stack
           p={2}
@@ -31,11 +34,12 @@ const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
           direction='row'
           justifyContent="space-evenly"
           alignItems="center"
+          sx={{bgcolor:'#F4F6F8'}}
         >
-          <Typography sx={{marginLeft: '40px'}} variant="h6" component={'div'}>
+          <Typography  variant="h5" component={'div'}>
             Side Panel
           </Typography>
-          <IconButton  onClick={() => setIsDrawerOpened(false)}>
+          <IconButton onClick={() => setIsDrawerOpened(false)} sx={{ marginLeft: '20px' }}>
             <KeyboardArrowLeftIcon></KeyboardArrowLeftIcon>
           </IconButton>
 
@@ -43,9 +47,14 @@ const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
 
         <Divider />
 
+        <Stack sx={{bgcolor:'#F4F6F8', height: '100vh'}}>
+          <MenuBooks />
+          <MenuUser />
+        </Stack>
+
       </Drawer>
 
-    </div>
+    </Box>
   )
 }
 

@@ -1,7 +1,7 @@
 import { ThemeProvider, Box, Stack } from '@mui/material';
-import SidePanel from './components/SidePanel';
-import Test from './components/Test';
+import SidePanel from './components/SidePanel/SidePanel';
 import GlobalStyles from './theme/globalStyles';
+import Test from './components/Test';
 import theme from './theme/theme'
 import { useState } from "react"
 
@@ -14,13 +14,12 @@ function App() {
       <GlobalStyles />
       <Stack 
         direction={'row'}
-        sx={{bgcolor: "#F9FAFB", height: "100vh"}}
         >
 
         <SidePanel isDrawerOpened={isDrawerOpened} setIsDrawerOpened={setIsDrawerOpened}/>
 
         <Box sx={ isDrawerOpened && {marginLeft:'250px'} }>
-          <Test />
+          {/* <Test /> */}
         </Box>
 
       </Stack>
