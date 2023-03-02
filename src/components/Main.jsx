@@ -1,29 +1,22 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import BookList from '../pages/BookList';
-
 import Home from '../pages/Home';
+import BookDetail from './BookDetail';
 
-const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <Home />,
-      errorElement: <h1>404 Not Found</h1>
-    },
-    {
-      path: '/books',
-      element: <BookList />
-    },
-    {
-      path: '/manage-books',
-      element: <h1>Manage books</h1>
-    },
-  ]);
 
+import { Route, Routes } from "react-router-dom";
+import { useState } from 'react';
 
 const Main = () => {
+
+  const [updatedList, setUpdatedList] = useState([])
+  console.log(updatedList)
   return (
     <div>
-        <RouterProvider router={router}></RouterProvider>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/books' element={<BookList updatedList={updatedList} setUpdatedList={setUpdatedList}/>} />
+        <Route path='/books/:isbn' element={<BookDetail />} />
+      </Routes>
     </div>
   )
 }

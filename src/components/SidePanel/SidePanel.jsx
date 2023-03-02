@@ -1,9 +1,12 @@
-import { Drawer, Typography, IconButton, Divider, Stack, List, ListItem, ListItemButton, ListItemText } from "@mui/material"
+import { Drawer, Typography, IconButton, Divider, Stack } from "@mui/material"
 import MenuIcon from '@mui/icons-material/Menu'
 import { Box } from "@mui/system"
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import MenuBooks from "./MenuBooks";
 import MenuUser from "./MenuUser";
+import MenuHome from "./MenuHome";
+
+
 
 
 const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
@@ -48,6 +51,7 @@ const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
         <Divider />
 
         <Stack sx={{bgcolor:'#F4F6F8', height: '100vh'}}>
+          <MenuHome />
           <MenuBooks />
           <MenuUser />
         </Stack>

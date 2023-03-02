@@ -1,4 +1,5 @@
 import { Typography, List, ListItem, ListItemButton, ListItemText } from "@mui/material"
+import {Link} from 'react-router-dom'
 
 const MenuBooks = () => {
     return (
@@ -14,7 +15,7 @@ const MenuBooks = () => {
             <ListItem disablePadding>
                 <ListItemButton>
                     <Typography  sx={{paddingLeft: '10px'}}>
-                        Book list
+                        <Link to={'/books'}> Book List</Link>
                     </Typography>
                 </ListItemButton>
             </ListItem>

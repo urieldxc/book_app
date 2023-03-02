@@ -9,13 +9,14 @@ import gitPocket from "../img/9781449325862.jpg"
 import eloquentJs from "../img/9781593275846.jpg"
 import jsApplications from "../img/9781491950296.jpg"
 import evolvableWebApis from "../img/9781449337711.jpg"
+import { Link } from 'react-router-dom'
 
 
 
 
 const BookCard = ({ book }) => {
 
-    const imageBook = (isbn) =>{
+    const imageBook = (isbn) => {
         if (isbn == "9781449331818") return designPatterns;
         if (isbn == "9781449365035") return speakingJs;
         if (isbn == "9781491950296") return jsApplications;
@@ -26,18 +27,20 @@ const BookCard = ({ book }) => {
         if (isbn == "9781449337711") return evolvableWebApis;
     }
 
-    
-    return (
-        <Card sx={{ minWidth: 150, minHeight: 250}}>
-            <CardContent>
-                <img src={imageBook(book.isbn)}></img>
-                <Typography variant='body1' mt={2} fontWeight="bold" textAlign={'center'}>
-                    {book.title}
-                    
-                </Typography>
-            </CardContent>
 
-        </Card>
+    return (
+        <Link to={`/books/${book.isbn}`}>
+            <Card sx={{ minWidth: 150, minHeight: 250 }} >
+                <CardContent>
+                    <img src={imageBook(book.isbn)}></img>
+                    <Typography variant='body1' mt={2} fontWeight="bold" textAlign={'center'}>
+                        {book.title}
+
+                    </Typography>
+                </CardContent>
+
+            </Card>
+        </Link>
     )
 }
 
