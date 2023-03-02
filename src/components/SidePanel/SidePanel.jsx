@@ -13,7 +13,7 @@ const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
   return (
     <Box >
 
-      <IconButton sx={{margin:"40px"}} size="large" edge='start' color='inherit' aria-label="logo" onClick={() => setIsDrawerOpened(true)}>
+      <IconButton sx={{margin:"30px"}} size="large" edge='start' color='inherit' aria-label="logo" onClick={() => setIsDrawerOpened(true)}>
         <MenuIcon></MenuIcon>
       </IconButton>
 
