@@ -7,7 +7,7 @@ const MenuHome = () => {
                 <ListItem >
                     <ListItemText>
                         <Typography variant="h6" fontWeight={'bold'} sx={{ paddingLeft: '10px' }}>
-                            Home
+                            <Link to={"/"} style={{textDecoration: 'none', color:'inherit'}}> Home </Link>
                         </Typography>
                     </ListItemText>
                 </ListItem>

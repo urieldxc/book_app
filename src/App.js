@@ -1,4 +1,4 @@
-import { ThemeProvider, Box, Stack } from '@mui/material';
+import { ThemeProvider, Box, Stack, Container } from '@mui/material';
 import SidePanel from './components/SidePanel/SidePanel';
 import GlobalStyles from './theme/globalStyles';
 import theme from './theme/theme';
@@ -13,14 +13,14 @@ function App() {
 
     
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
+      {/* <GlobalStyles /> */}
       <Stack direction={'row'}>
 
         <SidePanel isDrawerOpened={isDrawerOpened} setIsDrawerOpened={setIsDrawerOpened}/>
 
-        <Box sx={ isDrawerOpened && {marginLeft:'250px'} }>
+        <Container>
           <Main />
-        </Box>
+        </Container>
 
       </Stack>
     </ThemeProvider>

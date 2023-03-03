@@ -5,6 +5,7 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import MenuBooks from "./MenuBooks";
 import MenuUser from "./MenuUser";
 import MenuHome from "./MenuHome";
+import { colors } from "@mui/material";
 
 
 
@@ -16,8 +17,8 @@ const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
   return (
     <Box >
 
-      <IconButton sx={{margin:"30px"}} size="large" edge='start' color='inherit' aria-label="logo" onClick={() => setIsDrawerOpened(true)}>
-        <MenuIcon></MenuIcon>
+      <IconButton sx={{marginLeft:"30px", marginTop: 2}} size="large" edge='start' aria-label="logo" onClick={() => setIsDrawerOpened(true)}>
+        <MenuIcon ></MenuIcon>
       </IconButton>
 
       <Drawer
@@ -25,7 +26,7 @@ const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
           width: '0px',
           flexShrink: 0,
         }}
-        variant="persistent"
+        
         anchor='left'
         open={isDrawerOpened}
         onClose={() => setIsDrawerOpened(false)}
@@ -37,7 +38,7 @@ const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
           direction='row'
           justifyContent="space-evenly"
           alignItems="center"
-          sx={{bgcolor:'#F4F6F8'}}
+          sx={{bgcolor:'#FFDA5C'}}
         >
           <Typography  variant="h5" component={'div'}>
             Side Panel
@@ -48,9 +49,9 @@ const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
 
         </Stack>
 
-        <Divider />
+        <Divider sx={{borderColor: "black"}}/>
 
-        <Stack sx={{bgcolor:'#F4F6F8', height: '100vh'}}>
+        <Stack sx={{ height: '100vh'}}>
           <MenuHome />
           <MenuBooks />
           <MenuUser />

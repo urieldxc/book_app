@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const MenuBooks = () => {
     return (
-        <List>
+        <List >
             <ListItem >
                 <ListItemText>
                     <Typography variant="h6" fontWeight={'bold'}  sx={{paddingLeft: '10px'}}>
@@ -15,7 +15,7 @@ const MenuBooks = () => {
             <ListItem disablePadding>
                 <ListItemButton>
                     <Typography  sx={{paddingLeft: '10px'}}>
-                        <Link to={'/books'}> Book List</Link>
+                        <Link to={'/books'} style={{textDecoration: 'none', color:'inherit'}} > Book List</Link>
                     </Typography>
                 </ListItemButton>
             </ListItem>
@@ -23,7 +23,8 @@ const MenuBooks = () => {
             <ListItem disablePadding>
                 <ListItemButton>
                     <Typography  sx={{paddingLeft: '10px'}}>
-                        Manage books
+                        
+                        <Link to ={'/add-book'} style={{textDecoration: 'none', color:'inherit'}} > Add books </Link>
                     </Typography>
                 </ListItemButton>
             </ListItem>
