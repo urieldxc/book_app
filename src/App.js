@@ -1,9 +1,10 @@
-import { ThemeProvider, Box, Stack, Container } from '@mui/material';
+import { ThemeProvider, Stack, Container, CssBaseline } from '@mui/material';
 import SidePanel from './components/SidePanel/SidePanel';
 import GlobalStyles from './theme/globalStyles';
-import theme from './theme/theme';
 import { useState } from "react";
+import { darkTheme } from './theme/darkTheme';
 import Main from './components/Main';
+import './App.css'
 
 function App() {
 
@@ -12,8 +13,9 @@ function App() {
   return (
 
     
-    <ThemeProvider theme={theme}>
-      {/* <GlobalStyles /> */}
+    <ThemeProvider theme={darkTheme}>
+      <GlobalStyles />
+      <CssBaseline />
       <Stack direction={'row'}>
 
         <SidePanel isDrawerOpened={isDrawerOpened} setIsDrawerOpened={setIsDrawerOpened}/>

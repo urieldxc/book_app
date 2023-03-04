@@ -5,7 +5,7 @@ import { imageBook } from '../utils/imageBooks'
 
 const BookCard = ({ book }) => {
     return (
-        <Link to={`/books/${book.isbn}`}>
+        <Link style={{textDecoration:"none"}} to={`/books/${book.isbn}`}>
             <Card sx={{ width: 280, height: 450 }} >
                 <CardContent>
                     <Box

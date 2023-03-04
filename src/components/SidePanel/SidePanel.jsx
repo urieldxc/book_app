@@ -17,8 +17,8 @@ const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
   return (
     <Box >
 
-      <IconButton sx={{marginLeft:"30px", marginTop: 2}} size="large" edge='start' aria-label="logo" onClick={() => setIsDrawerOpened(true)}>
-        <MenuIcon ></MenuIcon>
+      <IconButton sx={{ marginTop: 2 }} size="large" edge='start' aria-label="logo" onClick={() => setIsDrawerOpened(true)}>
+        <MenuIcon style={{position: "absolute", left:"100", top:"22"}} ></MenuIcon>
       </IconButton>
 
       <Drawer
@@ -38,7 +38,7 @@ const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
           direction='row'
           justifyContent="space-evenly"
           alignItems="center"
-          sx={{bgcolor:'#FFDA5C'}}
+          // sx={{bgcolor:'#FFDA5C'}}
         >
           <Typography  variant="h5" component={'div'}>
             Side Panel

@@ -21,7 +21,7 @@ const Main = () => {
         <Route path='/' element={<Home />} />
         <Route path='/books' element={<BookList updatedList={updatedList} setUpdatedList={setUpdatedList} />} />
         <Route path='/add-book' element={<AddBooks updatedList={updatedList} setUpdatedList={setUpdatedList} />} />
-        <Route path='/books/:isbn' element={<BookDetail updatedList={updatedList} />} />
+        <Route path='/books/:isbn' element={<BookDetail updatedList={updatedList} setUpdatedList={setUpdatedList} />} />
       </Routes>
     </div>
   )

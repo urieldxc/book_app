@@ -4,20 +4,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 
 const AddBooks = ({ updatedList, setUpdatedList }) => {
-
-    // const newBook = {
-    //     "isbn": "",
-    //     "title": "",
-    //     "subtitle": "",
-    //     "author": "",
-    //     "published": "",
-    //     "publisher": "",
-    //     "pages": "",
-    //     "description": "",
-    //     "website": "",
-    //     "category": ""
-    // }
-
     const [values, setValues] = useState(
         {
             "isbn": "",
@@ -37,20 +23,8 @@ const AddBooks = ({ updatedList, setUpdatedList }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // const newBook = {
-        //     "isbn": "123456789",
-        //     "title": "Titulo random",
-        //     "subtitle": "Descripcion random",
-        //     "author": "Eleuterio Masol",
-        //     "published": "2014-12-14T00:00:00.000Z",
-        //     "publisher": "MemoTest SA",
-        //     "pages": 472,
-        //     "description": "Una sinopsis mas random aún",
-        //     "website": "http://eloquentjavascript.net/",
-        //     "category": "Classic"
-        // }
 
-        const newList = [...updatedList, values]
+        const newList = [values, ...updatedList]
         setUpdatedList(newList)
         navigate("/books")
     }
@@ -66,7 +40,6 @@ const AddBooks = ({ updatedList, setUpdatedList }) => {
 
     return (
         <div>
-            <button onClick={handleSubmit}>Add</button>
             <Container component="main" maxWidth="md" >
                 <form>
                     <Box
