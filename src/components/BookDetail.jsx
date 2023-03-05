@@ -56,7 +56,7 @@ const BookDetail = ({ updatedList, setUpdatedList }) => {
                         <Grid container spacing={2} mt={2}>
                             <Grid item xs={12} md={5} p={0}>
                                 <Paper elevation={12}>
-                                    <img src={imageBook(bookDetails.isbn)} style={{ width: 460, height: 640, marginTop:"-16px" }}></img>
+                                    <img src={imageBook(bookDetails.isbn)} style={{ width: 460, height: 640, marginTop:"-16px" }} alt={bookDetails.title}></img>
                                 </Paper>
                             </Grid>
 
