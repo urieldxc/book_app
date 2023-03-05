@@ -12,7 +12,7 @@ const MenuUser = () => {
             </ListItem>
 
             <ListItem disablePadding>
-                <ListItemButton>
+                <ListItemButton disabled>
                     <Typography sx={{ paddingLeft: '10px' }} >
                         My user
                     </Typography>
@@ -20,7 +20,7 @@ const MenuUser = () => {
             </ListItem>
 
             <ListItem disablePadding>
-                <ListItemButton>
+                <ListItemButton disabled>
                     <Typography sx={{ paddingLeft: '10px' }}>
                         Log out
                     </Typography>

@@ -4,7 +4,6 @@ import { Box } from "@mui/system"
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import MenuBooks from "./MenuBooks";
 import MenuUser from "./MenuUser";
-import MenuHome from "./MenuHome";
 import { colors } from "@mui/material";
 
 
@@ -58,7 +57,6 @@ const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
         <Divider sx={{borderColor: "black"}}/>
 
         <Stack sx={{ height: '100vh'}}>
-          <MenuHome />
           <MenuBooks />
           <MenuUser />
         </Stack>

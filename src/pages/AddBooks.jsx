@@ -15,7 +15,7 @@ const AddBooks = ({ updatedList, setUpdatedList }) => {
             "pages": "",
             "description": "",
             "website": "",
-            "category": ""  
+            "category": ""
         }
     )
 
@@ -182,15 +182,17 @@ const AddBooks = ({ updatedList, setUpdatedList }) => {
                                     />
                                 </Grid>
                             </Grid>
-                            <Button
-                                type="submit"
-                                fullWidth
-                                variant="contained"
-                                sx={{ mt: 3, mb: 2 }}
-                                onClick={handleSubmit}
-                            >
-                                Add book
-                            </Button>
+                            <Grid item sx={{display: "flex",justifyContent: "start"}}>
+
+                                <Button
+                                    type="submit"
+                                    variant="contained"
+                                    sx={{ mt: 3, mb: 2, width: 'fit-content', alignSelf: 'center' }}
+                                    onClick={handleSubmit}
+                                >
+                                    Add book
+                                </Button>
+                            </Grid>
                         </Box>
                     </Box>
                 </form>

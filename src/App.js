@@ -9,25 +9,31 @@ function App() {
 
   const [isDrawerOpened, setIsDrawerOpened] = useState(false)
 
-  return (
+ return (
+  <ThemeProvider theme={darkTheme}>
+    <GlobalStyles />
+    <CssBaseline />
+    <Stack
+      direction={{ xs: 'column', md: 'row' }}
+      sx={{ height: '100vh' }}
+    >
+      <SidePanel
+        isDrawerOpened={isDrawerOpened}
+        setIsDrawerOpened={setIsDrawerOpened}
+        sx={{
+          width: { xs: '100%', md: '240px' },
+          flexShrink: 0,
+          flexGrow: 1,
+        }}
+      />
 
-    
-    <ThemeProvider theme={darkTheme}>
-      <GlobalStyles />
-      <CssBaseline />
-      <Stack direction={'row'}>
+      <Container sx={{ flexGrow: 999 }}>
+        <Main />
+      </Container>
+    </Stack>
+  </ThemeProvider>
+);
 
-        <SidePanel isDrawerOpened={isDrawerOpened} setIsDrawerOpened={setIsDrawerOpened}/>
-
-        <Container>
-          <Main />
-        </Container>
-
-      </Stack>
-    </ThemeProvider>
-    
-
-  );
 }
 
 export default App;
