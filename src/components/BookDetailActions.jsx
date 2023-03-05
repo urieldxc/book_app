@@ -21,7 +21,7 @@ const BookDetailActions = ({ bookDetails, handleOpen }) => {
             </Hidden>
             <Hidden xsDown>
                 <Grid item>
-                    <Stack direction="row" spacing={2} width="100%">
+                    <Stack direction="row" width="100%">
                         <Hidden smDown>
                             <Button sx={{ width: '20%', height: '40px', paddingRight: '20px', paddingLeft: '20px' }} size="small" component={Link} variant="contained" href={`${bookDetails.website}`}>
                                 Website

@@ -12,7 +12,7 @@ const BookCard = ({ book }) => {
     };
     return (
         <Link style={{textDecoration:"none"}} to={`/books/${book.isbn}`}>
-            <Card sx={{ ...hoverStyle,width: 280, height: 450 }} >
+            <Card sx={{ ...hoverStyle,width: 280, height: 450, margin: "0 auto" }} >
                 <CardContent>
                     <Box
                         sx={{
