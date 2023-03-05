@@ -4,7 +4,6 @@ import GlobalStyles from './theme/globalStyles';
 import { useState } from "react";
 import { darkTheme } from './theme/darkTheme';
 import Main from './components/Main';
-import './App.css'
 
 function App() {
 

@@ -1,11 +1,10 @@
-import BookList from '../pages/BookList';
-import Home from '../pages/Home';
-import BookDetail from './BookDetail';
-
-import jsonBooks from '../utils/books.json'
 import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from 'react';
+import jsonBooks from '../utils/books.json'
+import BookDetail from './BookDetail';
+import BookList from '../pages/BookList';
 import AddBooks from '../pages/AddBooks';
+import Home from '../pages/Home';
 
 const Main = () => {
 
