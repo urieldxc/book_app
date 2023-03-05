@@ -22,7 +22,7 @@ const BookCard = ({ book }) => {
                         src={imageBook(book.isbn)}
                         alt={book.title}
                     >
-                    <img src={imageBook(book.isbn)} style={{height: 350, width: 250}}></img>
+                    <img src={imageBook(book.isbn)} style={{height: 350, width: 250}} alt={book.title}></img>
                     </Box>
                     <Typography variant='body2' mt={2} fontWeight="bold" textAlign={'center'}>
                         {book.title}

@@ -1,6 +1,5 @@
-import { Box, Button, Modal, Paper, Typography } from "@mui/material"
+import { Box, Button, Modal,Typography } from "@mui/material"
 import { Stack } from "@mui/system";
-import { useState } from "react"
 
 
 const DeleteModal = ({handleClose, handleOpen, handleDelete, open, isbn}) => {

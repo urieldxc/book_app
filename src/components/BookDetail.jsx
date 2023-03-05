@@ -24,7 +24,7 @@ const BookDetail = ({ updatedList, setUpdatedList }) => {
         const filtered = updatedList.find(book => book.isbn === isbn)
         setBookDetails(filtered)
     }
-
+    //isbn
     useEffect(() => {
         if (updatedList) filterBookDetail(isbn)
     }, [updatedList, isbn])
