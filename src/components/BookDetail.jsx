@@ -3,6 +3,7 @@ import { Box } from '@mui/system'
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { imageBook } from '../utils/imageBooks'
+import BookDetailActions from './BookDetailActions'
 import DeleteModal from './DeleteModal'
 
 const BookDetail = ({ updatedList, setUpdatedList }) => {
@@ -56,7 +57,7 @@ const BookDetail = ({ updatedList, setUpdatedList }) => {
                         <Grid container spacing={2} mt={2}>
                             <Grid item xs={12} md={5} p={0}>
                                 <Paper elevation={12}>
-                                    <img src={imageBook(bookDetails.isbn)} style={{ width: 460, height: 640, marginTop:"-16px" }} alt={bookDetails.title}></img>
+                                    <img src={imageBook(bookDetails.isbn)} style={{ width: 460, height: 640, marginTop: "-16px" }} alt={bookDetails.title}></img>
                                 </Paper>
                             </Grid>
 
@@ -101,11 +102,9 @@ const BookDetail = ({ updatedList, setUpdatedList }) => {
 
                                 <DeleteModal handleDelete={handleDelete} handleClose={handleClose} handleOpen={handleOpen} open={open} isbn={bookDetails.isbn}></DeleteModal>
 
-                                <Stack direction={'row'} mt={4} spacing={2} >
-                                    <Button style={{ paddingRight: "20px", paddingLeft: "20px" }} size='small' component={Link} variant='contained' href={`${bookDetails.website}`}> Website</Button>
-                                    <Button style={{ paddingRight: "20px", paddingLeft: "20px" }} size='small' variant='contained'>Add to favourites ❤️</Button>
-                                    <Button style={{ paddingRight: "20px", paddingLeft: "20px" }} size='small' onClick={handleOpen} variant='contained'>Delete book 🗑️</Button>
-                                </Stack>
+                                <Grid >
+                                    <BookDetailActions bookDetails={bookDetails} handleOpen={handleOpen} />
+                                </Grid>
                             </Grid>
                         </Grid>
                     </Paper>
