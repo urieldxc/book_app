@@ -10,15 +10,22 @@ import { colors } from "@mui/material";
 
 
 
+
 const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
 
-
+  const hoverMenuStyle = {
+    '&:hover':{
+        transform: "scale(1.5, 1.5) translate(-135%, -25%)",
+        background: colors.blueGrey[700],
+        backgroundColor: 'transparent',
+    }
+};
 
   return (
     <Box >
 
-      <IconButton sx={{ marginTop: 2 }} size="large" edge='start' aria-label="logo" onClick={() => setIsDrawerOpened(true)}>
-        <MenuIcon style={{position: "absolute", left:"100", top:"22"}} ></MenuIcon>
+      <IconButton  sx={{...hoverMenuStyle, marginTop: 2 }} size="large" edge='start' aria-label="logo" onClick={() => setIsDrawerOpened(true)}>
+        <MenuIcon  style={{position: "absolute", left:"100", top:"22", color: colors.deepPurple[200]}} ></MenuIcon>
       </IconButton>
 
       <Drawer
@@ -38,12 +45,11 @@ const SidePanel = ({ isDrawerOpened, setIsDrawerOpened }) => {
           direction='row'
           justifyContent="space-evenly"
           alignItems="center"
-          // sx={{bgcolor:'#FFDA5C'}}
         >
           <Typography  variant="h5" component={'div'}>
             Side Panel
           </Typography>
-          <IconButton onClick={() => setIsDrawerOpened(false)} sx={{ marginLeft: '20px' }}>
+          <IconButton onClick={() => setIsDrawerOpened(false)} sx={{ marginLeft: '20px',color: colors.deepPurple[200] }}>
             <KeyboardArrowLeftIcon></KeyboardArrowLeftIcon>
           </IconButton>
 
