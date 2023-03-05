@@ -52,30 +52,30 @@ const BookDetail = ({ updatedList, setUpdatedList }) => {
                             </Typography>
                         </Button>
                     </Link>
-
+    
                     <Paper>
                         <Grid container spacing={2} mt={2}>
                             <Grid item xs={12} md={5} p={0}>
                                 <Paper elevation={12}>
-                                    <img src={imageBook(bookDetails.isbn)} style={{ width: 460, height: 640, marginTop: "-16px" }} alt={bookDetails.title}></img>
+                                    <img src={imageBook(bookDetails.isbn)} style={{ width: '100%', height: 'auto', marginTop: "-16px" }} alt={bookDetails.title}></img>
                                 </Paper>
                             </Grid>
-
+    
                             <Grid item container xs={12} md={7} p={4} style={{ paddingLeft: "50px" }}>
-
+    
                                 <Box minWidth={1 / 1}>
-                                    <Typography variant='h4' fontWeight={600}>{bookDetails.title}</Typography>
-                                    <Typography variant='h6'>{bookDetails.subtitle}</Typography>
+                                    <Typography variant='h4' fontWeight={600} sx={{ fontSize: {xs: '18px', md: '32px'} }}>{bookDetails.title}</Typography>
+                                    <Typography variant='h6' sx={{ fontSize: {xs: '16px', md: '24px'} }}>{bookDetails.subtitle}</Typography>
                                 </Box>
-
-                                <Typography pt={'20px'} fontWeight={600}>Description</Typography>
-
+    
+                                <Typography pt={'20px'} fontWeight={600} sx={{ fontSize: {xs: '16px', md: '24px'} }}>Description</Typography>
+    
                                 <Box>
-                                    <Typography>{bookDetails.description}</Typography>
+                                    <Typography sx={{ fontSize: {xs: '14px', md: '18px'} }}>{bookDetails.description}</Typography>
                                 </Box>
-
+    
                                 <Grid item container>
-
+    
                                     <Grid item md={6} xs={6}>
                                         <ListItem>
                                             <ListItemText primary="Author" secondary={bookDetails.author} />
@@ -99,21 +99,22 @@ const BookDetail = ({ updatedList, setUpdatedList }) => {
                                         </ListItem>
                                     </Grid>
                                 </Grid>
-
+    
                                 <DeleteModal handleDelete={handleDelete} handleClose={handleClose} handleOpen={handleOpen} open={open} isbn={bookDetails.isbn}></DeleteModal>
-
+    
                                 <Grid >
                                     <BookDetailActions bookDetails={bookDetails} handleOpen={handleOpen} />
                                 </Grid>
                             </Grid>
                         </Grid>
                     </Paper>
-
+    
                 </Box>
             )
             }
         </Container >
     )
+    
 }
 
 export default BookDetail
