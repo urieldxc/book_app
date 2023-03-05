@@ -75,7 +75,7 @@ const BookDetail = ({ updatedList, setUpdatedList }) => {
 
                                 <Grid item container>
 
-                                    <Grid item xs={12} md={6} xs={6}>
+                                    <Grid item md={6} xs={6}>
                                         <ListItem>
                                             <ListItemText primary="Author" secondary={bookDetails.author} />
                                         </ListItem>
@@ -86,7 +86,7 @@ const BookDetail = ({ updatedList, setUpdatedList }) => {
                                             <ListItemText primary="Publisher" secondary={bookDetails.publisher} />
                                         </ListItem>
                                     </Grid>
-                                    <Grid item xs={12} md={6} xs={6}>
+                                    <Grid item md={6} xs={6}>
                                         <ListItem>
                                             <ListItemText primary="Pages" secondary={bookDetails.pages} />
                                         </ListItem>
