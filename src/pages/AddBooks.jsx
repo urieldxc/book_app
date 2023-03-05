@@ -35,7 +35,6 @@ const AddBooks = ({ updatedList, setUpdatedList }) => {
             ...values,
             [name]: value
         })
-        console.log(values)
     }
 
     return (
